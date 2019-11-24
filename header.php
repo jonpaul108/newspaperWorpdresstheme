@@ -5,16 +5,16 @@
 </head>
 <body <?php body_class();?>>
     <header class='headerContainer'>
-        <div class='logo'>
-        <?php echo wp_get_attachment_image(56, 'small')?>
-        </div>
+        <a class='logo'>
+            <?php echo wp_get_attachment_image(56, 'small')?>
+        </a>
         <nav class='menu'>
             <a>HOME</a>
             <a>ABOUT</a>
             <a>BLOG</a>
-            <a>LATEST</a>
+            <a>STORE</a>
         </nav>
-        <div class='socialMedia'>
+        <div class='headSocial'>
             <a><img /></a>
             <a><img/></a>
             <a><img/></a>
