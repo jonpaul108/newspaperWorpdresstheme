@@ -1,0 +1,361 @@
+/*
+Theme Name: Super_Blog
+Theme URI: https://github.com/jonpaul108
+Author: Jonathan McNamara
+Author URI: https://github.com/jonpaul108
+Description: A clean starter theme built for blogs
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: clean, blogs
+Text Domain: Super_Blog_Theme
+*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+html {
+    background-color: #f5f6fa;
+}
+
+body {
+    background: transparent;
+}
+
+.headerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 110%;
+    min-height: 4rem;
+    background-color: #fff;
+    position: fixed;
+    top: 0; 
+    z-index: 4;
+}
+
+.shadow {
+    top: 4rem;
+    position:fixed;
+    width:100%;
+    box-shadow: 0px 0.5px 0px 3px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.cover {
+    width: 100%;
+    min-height: 0.3rem;
+    background-color: #fff;
+    position: absolute;
+    top: 4rem;
+    left:0;
+    z-index: 3; 
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.menu, .socialMedia {
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #192a56;
+}
+
+.menu a {
+    width: 25%;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    min-width: 500px;
+}
+
+#heroImage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+    height: 40rem;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1.5s;
+}
+
+#heroImage:hover {
+    transform: scale(1.01);
+}
+
+#heroImage img {
+    object-fit: contain;
+}
+
+#heroImage::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+#heroImage::after {
+    content: 'Latest Post: How To \A Find Your Lost Dog';
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 17rem;
+    left: 8rem;
+    font-size: 3em;
+    white-space: pre;
+    pointer-events: none;
+}
+
+.slogan {
+    border-top: 2px solid #487eb0;
+    border-bottom: 2px solid #487eb0;
+    width: 80%; 
+    height: 6rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slogan p {
+    font-family: 'Abril', cursive;
+    font-weight: 200; 
+    text-align: center;
+    white-space: pre;
+    max-width: 100%;
+    height: auto;
+    color: rgba(127, 143, 166,0.9);
+}
+
+.slogan p:nth-child(2) {
+    margin-top: 0;
+}
+
+.listingWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-left: 5rem;
+    margin-right:5rem;
+    margin-top: 1rem;
+    max-width:80%;
+}
+
+.listingWrapper div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2.5;
+    overflow:hidden;
+}
+
+.listingWrapper div:nth-child(1) a {
+    height: 32rem;
+    width: 32rem;
+    overflow:hidden;
+}
+
+.listingWrapper div:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2.5;
+    overflow:hidden;
+}
+
+.listingWrapper div:nth-child(2) a {
+    height: 32rem;
+    width: 32rem;
+    overflow:hidden;
+}
+/*
+.listingWrapper div:not:(:nth-child(2)):nth-child(-2n + 2) {
+    background-color: #fff;
+    height:calc(100% + 1rem);
+}
+*/
+
+/*
+.listingWrapper div:nth-child(2n + 6) {
+   background-color: #fff;
+   height:100%;
+   margin-top: 1rem;
+}
+
+
+.listingWrapper div:nth-child(odd) {
+    background-color: #fff;
+    overflow:hidden; 
+ }
+ */
+
+.listing {
+    height:100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    border-radius: 5px;
+    min-width:16rem;
+}
+
+.listing a {
+    height:16rem;
+    width: 16rem;
+    overflow:hidden;
+}
+
+.listing:nth-child(n+3) h3 {
+    font-size: 1rem;
+}
+
+
+.thumbnail {
+    transition: 1s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail::after {
+    content:'';
+    position: absolute;
+    transform: translate(-100%, -0.1%);
+    display:inline-block;
+    width: inherit;
+    height: inherit;
+    background-image: linear-gradient(rgb(39, 60, 117, 0.4), rgb(39, 60, 117, 0.4));
+    transition: 1s;
+}
+
+.thumbnail:hover:after {
+    opacity: 0;
+    background-blend-mode: screen;
+}
+
+.listing h3 a {
+    text-decoration: none;
+    color: #192a56;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.listing img {
+    object-fit: cover;
+    height:inherit;
+    width:inherit;
+}
+.listing p {
+    max-width: 300px;
+    font-family: 'Bitter', serif;
+    color: #7f8fa6;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 14em;
+    width:100%;
+    background-color:#718093;
+    margin-top: 2rem;
+}
+
+.footer a {
+    text-align: center;
+    font-family: 'PT Serif', serif;
+}
+
+.extrasContainer {
+    margin-top: 1rem;
+    height: auto;
+    width: 80%;
+    border-top: 2px dotted #7f8fa6;
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+}
+
+#shirts {
+    min-height: 25rem;
+    min-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#shirts a {
+    width: 80%;
+    height: 80%;
+    max-height: 24rem;
+    max-width:24rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1rem;
+    background-color: rgb(39, 60, 117, 0.5);
+}
+
+#shirts a img {
+    object-fit: cover;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+#shirts a::after {
+    content: 'Support us! \A Check out our shirts.';
+    white-space: pre;
+    color: #fff;
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+    width: 80%;
+    font-size: 2rem;
+    position: absolute;
+    text-align: center;
+
+}
+
+#socialMedia {
+    grid-area: 'social';
+    min-height: 25rem;
+    min-width: 20rem;
+}
+
+.middleBorder {
+    border: 2px dotted #7f8fa6;
+    height:100%;
+    max-width:2px;
+    width:2px;
+    justify-self: center;
+}
+
+
