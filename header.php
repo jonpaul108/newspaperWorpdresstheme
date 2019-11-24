@@ -6,7 +6,7 @@
 <body <?php body_class();?>>
     <header class='headerContainer'>
         <div class='logo'>
-            <span>logo</span>
+        <?php echo wp_get_attachment_image(56, 'small')?>
         </div>
         <nav class='menu'>
             <a>HOME</a>

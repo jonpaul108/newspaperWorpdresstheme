@@ -37,11 +37,18 @@ get_header();?>
                         <?php echo wp_get_attachment_image(45, 'medium')?>
                      </a>
                 </aside>
-                <div class='middleBorder'></div>
-                </aside id='socialMedia'>
-                    <p>Follow us</p>
-                    
-                </aside>
+                <div id='socialMedia'>
+                    <h3>Follow us</h3>
+                    <a>
+                        <?php echo wp_get_attachment_image(52, 'medium')?>
+                    </a>
+                    <a>
+                        <?php echo wp_get_attachment_image(53, 'medium')?>
+                    </a>
+                    <a>
+                        <?php echo wp_get_attachment_image(54, 'medium')?>
+                    </a>
+                </div>
             </div>
     
 <?php get_footer();?>
