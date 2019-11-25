@@ -78,18 +78,30 @@ body {
     cursor: pointer;
 }
 
-.menu {
+.menu, .menu ul, .menu ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.menu a {
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li a {
     width: 5rem;
     transition: 0.3s;
     text-align: center;
     transition: 0.5s;
+}
+
+.menu ul li a {
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #192a56;
+    text-decoration: none;
 }
 
 .menu a:hover {
@@ -399,4 +411,5 @@ body {
     border: none;
     font-size: 1em;
     color: rgba(245, 246, 250,1.0);
+    cursor: pointer;
 }

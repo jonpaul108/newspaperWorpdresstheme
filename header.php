@@ -9,10 +9,7 @@
             <?php echo wp_get_attachment_image(56, 'small')?>
         </a>
         <nav class='menu'>
-            <a>HOME</a>
-            <a>ABOUT</a>
-            <a>BLOG</a>
-            <a>STORE</a>
+            <?php wp_nav_menu(array('theme_location' => 'top-nav')) ?>
         </nav>
         <div class='headSocial'>
             <a><img /></a>

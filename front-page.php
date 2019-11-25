@@ -5,7 +5,8 @@
  * Template Name: Front Page
  */
 
-get_header();?>
+get_header();
+?>
     <div class='container'>
         <div id='heroImage'>
             <?php echo wp_get_attachment_image(13, 'full')?>   
