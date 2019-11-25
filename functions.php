@@ -18,6 +18,7 @@ register_nav_menus(
     )
 );
 
+
 add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
 add_action('wp_enqueue_scripts', 'load_styles');
 add_action( 'after_setup_theme', 'theme_setup' );

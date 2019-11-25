@@ -5,7 +5,7 @@
 </head>
 <body <?php body_class();?>>
     <header class='headerContainer'>
-        <a class='logo'>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='logo'>
             <?php echo wp_get_attachment_image(56, 'small')?>
         </a>
         <nav class='menu'>
