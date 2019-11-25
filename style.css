@@ -164,6 +164,7 @@ body {
     border: none;
     color: rgba(220, 221, 225,1.0);
     font-family: 'Bitter', sans-serif;
+    cursor: pointer;
 }
 
 .slogan {
@@ -245,6 +246,7 @@ body {
     height:16rem;
     width: 16rem;
     overflow:hidden;
+    cursor: pointer;
 }
 
 .listing:nth-child(n+3) h3 {
@@ -280,6 +282,7 @@ body {
     text-decoration: none;
     color: #192a56;
     font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
 }
 .listing img {
     object-fit: cover;
@@ -386,7 +389,14 @@ body {
     margin-top: 1rem;
 }
 
-.footer a {
+.contact {
     text-align: center;
     font-family: 'PT Serif', serif;
+    height: 3rem;
+    width: 6rem;
+    text-align: center;
+    background-color: rgba(194, 54, 22, 0.7);
+    border: none;
+    font-size: 1em;
+    color: rgba(245, 246, 250,1.0);
 }
