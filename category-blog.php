@@ -8,6 +8,15 @@
 get_header();
 ?>
 
+<div class='blogMenuContainer'>
+    <h1 id='blogName'>Rad Animal Blog</h1>
+    <div></div>
+    <nav id='categories'>
+        <?php wp_nav_menu(array('theme_location' => 'blog-nav')) ?>
+    </nav>
+</div>
+
+
 <div class='blogPageWrapper'>
             <?php 
                     if (have_posts()) :

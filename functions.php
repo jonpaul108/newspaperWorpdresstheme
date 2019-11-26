@@ -15,6 +15,7 @@ add_theme_support('menus');
 register_nav_menus(
     array(
         'top-nav' => __('Top nav', 'theme'),
+        'blog-nav' => __('Blog Nav', 'theme'),
     )
 );
 

@@ -37,7 +37,7 @@ body {
 .headerContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 110%;
+    width: 100%;
     min-height: 4rem;
     background-color: #fff;
     position: fixed;
@@ -53,7 +53,7 @@ body {
 .shadow {
     top: 4rem;
     position:fixed;
-    width:100%;
+    width: 100%;
     box-shadow: 0px 0.5px 0px 3px rgba(0,0,0,0.5);
     z-index: 2;
 }
@@ -72,6 +72,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 200px;
 }
 .logo img {
     height: inherit;
@@ -80,7 +81,7 @@ body {
     cursor: pointer;
 }
 
-.menu, .menu ul, .menu ul li {
+.menu, .menu div, .menu div ul, .menu div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -426,11 +427,68 @@ body {
 
 /* style for blog page */
 
+.blogMenuContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    min-height: 4rem;
+    position: absolute;
+    top: 4rem; 
+    font-family: 'PT Serif', serif;
+    color: #192a56;
+}
+
+#blogName {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Abril', cursive;
+    color: rgb(39, 60, 117, 1);
+    min-width: 200px;
+}
+
+.menu-blog-nav-container ul li a,
+a:visited {
+    text-decoration: none;
+    color: rgb(39, 60, 117, 1);
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: none;
+}
+
+.menu-blog-nav-container ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.menu-blog-nav-container ul li ul li a {
+    width: 4rem;
+    font-family: 'PT Serif', sans-serif;
+}
+
+.menu-blog-nav-container ul li:hover > ul,
+.menu-blog-nav-container ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+
+#menu-blog-nav {
+    list-style-type: none;
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #192a56;
+    text-decoration: none;
+}
+
+
+
 .blogPageWrapper {
-    margin-top: 4rem;
+    margin-top: 8rem;
     min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(300px, 100%);
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
