@@ -427,7 +427,61 @@ body {
 /* style for blog page */
 
 .blogPageWrapper {
-    height: 500px;
-    width: 500px;
-    background-color: red;
+    margin-top: 4rem;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }
+
+
+.blogListing {
+    grid-template-columns: 1fr;
+    background-color: rgb(0, 0, 0, 0);
+    border-radius: 0;
+    border-bottom: 2px dotted #7f8fa6; 
+    display: grid;
+}
+
+.blogListing:nth-last-child(1) {
+    border: none;
+}
+
+.blogTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.blogTitle h2 {
+    text-align: center;
+    color: #192a56;
+    font-size: 2rem;
+}
+
+.blogThumbnail {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogListing img {
+    object-fit: cover;
+    height: 25rem;
+    width: 100%;
+}
+
+.blogListing p {
+    text-align: center;
+    font-family: 'Bitter', serif;
+    color: #7f8fa6;
+    font-size: 1rem;
+}
+
