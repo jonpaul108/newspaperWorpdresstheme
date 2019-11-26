@@ -13,15 +13,15 @@ function mytheme_post_thumbnails() {
 add_theme_support('menus');
 
 register_nav_menus(
-
     array(
-        'top-nav' => __('Top Nav', 'theme'),
+        'top-nav' => __('Top nav', 'theme'),
     )
-
 );
+
 
 add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
 add_action('wp_enqueue_scripts', 'load_styles');
+add_action( 'after_setup_theme', 'theme_setup' );
 
 
 ?>

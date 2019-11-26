@@ -5,14 +5,11 @@
 </head>
 <body <?php body_class();?>>
     <header class='headerContainer'>
-        <a class='logo'>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='logo'>
             <?php echo wp_get_attachment_image(56, 'small')?>
         </a>
         <nav class='menu'>
-            <a>HOME</a>
-            <a>ABOUT</a>
-            <a>BLOG</a>
-            <a>STORE</a>
+            <?php wp_nav_menu(array('theme_location' => 'top-nav')) ?>
         </nav>
         <div class='headSocial'>
             <a><img /></a>
