@@ -19,6 +19,8 @@ Text Domain: Super_Blog_Theme
 
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen|Homemade+Apple|Mrs+Sheppards|Sedgwick+Ave+Display&display=swap');
+
 html,body {
     width: 100%;
     height: 100%;
@@ -646,31 +648,32 @@ body {
     background-image: linear-gradient(rgb(225, 177, 44, 0.5),rgb(76, 209, 55, 0.5));
 }
 
-
-
-/*
-.trap div {
-    position: relative;
-    background-image: linear-gradient(rgb(225, 177, 44),rgb(76, 209, 55));
+.storeBannerText {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 4rem;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    color: #fff;
+    text-align: end;
 }
 
-#imgTrap1 {
+.storeHeaderContainer {
     width: 100%;
-    height: 100%;
-    left: -16%;
-    transform: skew(-10deg);
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    right: 2rem;
 }
-
-#imgTrap2 {
-    height:100%;
-    transform: skew(-10deg);
+.storeHeaderContainer::before {
+    content: '';
+    top:0;
+    left: 0;
+    position: absolute;
     width: 100%;
+    height: 4rem;
 }
-
-#imgTrap3 {
-    height:100%;
-    transform: skew(-10deg);
-    width: 100%;
-    right: -16%;
-}
-*/
