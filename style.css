@@ -607,20 +607,24 @@ body {
 /* styles for store */
 
 .storeContainer {
-    position: absolute;
     width: 100%;
+    min-height: 100vh;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .heroContainer {
     width: 100%;
-    height: 40rem;
+    height: 100%;
     overflow: hidden;
     min-width: 20rem;
+    position: relative;
+}
+
+.heroContainer img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    object-position: 0% 70%;
 }
 
 /*
@@ -640,8 +644,9 @@ body {
     height: 40rem;
     position: absolute;
     background-image: linear-gradient(rgb(225, 177, 44, 0.5),rgb(76, 209, 55, 0.5));
-
 }
+
+
 
 /*
 .trap div {

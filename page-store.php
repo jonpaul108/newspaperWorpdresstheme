@@ -8,6 +8,7 @@ get_header();
 <div class='storeContainer'>
 
     <div class='heroContainer'>
+        <?php echo wp_get_attachment_image(110, 'full') ?>
     </div>
 </div>
 
