@@ -611,24 +611,27 @@ body {
 /* styles for store */
 
 .storeContainer {
-    width: 100%;
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    min-width: 500px;
 }
 
 .heroContainer {
     width: 100%;
     height: 40rem;
-    overflow: hidden;
     min-width: 20rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%; 
 }
+
+.heroContainer::before {
+    content: '';
+    width: 100%;
+    height: 40rem;
+    position: absolute;
+    background-image: linear-gradient(rgb(225, 177, 44, 0.5),rgb(76, 209, 55, 0.5));
+}
+
 
 .heroContainer img {
     width: 100%;
@@ -640,7 +643,7 @@ body {
 
 .elephantContainer {
     position: absolute;
-    top: 19%;
+    top: 17%;
     left: 11.5%;
     opacity: 0.2;
     height: 50%;
@@ -655,13 +658,6 @@ body {
     filter: blur(1px);
 }
 
-.heroContainer::before {
-    content: '';
-    width: 100%;
-    height: 40rem;
-    position: absolute;
-    background-image: linear-gradient(rgb(225, 177, 44, 0.5),rgb(76, 209, 55, 0.5));
-}
 
 .storeBannerText {
     font-family: 'Beth Ellen', cursive;
@@ -686,7 +682,7 @@ body {
 }
 
 .storeMenu {
-    margin-left: 5%;
+    margin-left: 2%;
     width: 25%;
     min-width: 10rem;
     height: 4rem;
@@ -729,12 +725,83 @@ body {
 }
 
 .shirtContainer {
-    position: absolute;
-    top: 50rem;
     display: grid;
-    width: 60%;
-    min-width: 20rem;
+    min-width: 60%;
+    min-width: 40rem;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    justify-items: center;
+    margin-top: 3rem;
 }
+
+.shirtText {
+    max-width: 80%;
+    margin-top: 5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shirtText p:nth-child(1), p:nth-child(4) {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(53, 59, 72,1.0);
+}
+
+.shirtText div {
+    height: 2px;
+    width: 10%;
+    background-color: rgba(225, 177, 44,1.0);
+}
+.shirtText p:nth-child(3) {
+    font-size: 1rem;
+    color: rgba(113, 128, 147, 1.0);
+}
+
+.shirtListing {
+    height: 25rem;
+    max-width: 50%;
+    width: 20rem;
+    display: flex;
+    grid-template-areas: repeat(1, 1fr);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shirtListing img {
+    height: 16rem;
+    width: 16rem;
+    object-fit: contain;
+}
+
+.shirtListing h2 {
+    font-size: 1.4rem;
+    font-family: 'Bitter', sans-serif;
+}
+
+.shirtListing h2 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(39, 60, 117,1.0);
+}
+
+.shirtPrice {
+    background-color: rgba(39, 60, 117,1.0);
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 2rem;
+    left: 6rem;
+    color: #fff;
+}
+
 
