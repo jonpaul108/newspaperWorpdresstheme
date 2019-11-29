@@ -5,16 +5,19 @@
 get_header();
 ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<div class='singleContainer'>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
- <?php the_title(); ?>
- <?php the_content(); ?>
- <?php echo get_the_date(); ?>
+    <h2 class='singleTitle'><?php the_title(); ?></h2>
+    <?php the_content(); ?>
+    <?php echo get_the_date(); ?>
 
-<?php endwhile; ?>
-<?php endif; ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
+</div>
 
 <?php 
+
 
 get_footer();
 ?>

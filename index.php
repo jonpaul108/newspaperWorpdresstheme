@@ -10,7 +10,7 @@ get_header();
     <div class='container'>
         <div id='heroImage'>
             <?php echo wp_get_attachment_image(13, 'full')?>   
-            <button class='latestPostButton'>Latest Post</button>     
+            <a href='<?php the_permalink() ?>' class='latestPostButton' ><span>Latest Post</span></a>     
         </div>
         <div class='slogan'>
             <p>"It's wonderful to climb the liquid mountains of the sky. Behind me and before me is God and I have no fears." </p>

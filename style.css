@@ -19,6 +19,10 @@ Text Domain: Super_Blog_Theme
 
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen|Homemade+Apple|Mrs+Sheppards|Sedgwick+Ave+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Bevan&display=swap');
+
 html,body {
     width: 100%;
     height: 100%;
@@ -37,7 +41,7 @@ body {
 .headerContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 110%;
+    width: 100%;
     min-height: 4rem;
     background-color: #fff;
     position: fixed;
@@ -53,7 +57,7 @@ body {
 .shadow {
     top: 4rem;
     position:fixed;
-    width:100%;
+    width: 100%;
     box-shadow: 0px 0.5px 0px 3px rgba(0,0,0,0.5);
     z-index: 2;
 }
@@ -72,6 +76,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 200px;
 }
 .logo img {
     height: inherit;
@@ -80,7 +85,7 @@ body {
     cursor: pointer;
 }
 
-.menu, .menu ul, .menu ul li {
+.menu, .menu div, .menu div ul, .menu div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -185,6 +190,18 @@ body {
     color: rgba(220, 221, 225,1.0);
     font-family: 'Bitter', sans-serif;
     cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.latestButton span {
+    text-align: center;
+}
+
+.latestPostButton:visited {
+    color: rgba(220, 221, 225,1.0);
 }
 
 .slogan {
@@ -426,11 +443,69 @@ body {
 
 /* style for blog page */
 
+.blogMenuContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    min-height: 4rem;
+    position: absolute;
+    top: 4rem; 
+    font-family: 'PT Serif', serif;
+    color: #192a56;
+}
+
+#blogName {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Abril', cursive;
+    color: rgb(39, 60, 117, 1);
+    min-width: 200px;
+}
+
+.menu-blog-nav-container ul li a,
+.menu-blog-nav-container ul li a:visited {
+    text-decoration: none;
+    color: rgb(39, 60, 117, 1);
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: none;
+}
+
+.menu-blog-nav-container ul li ul {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.menu-blog-nav-container ul li ul li a {
+    width: 4rem;
+    font-family: 'PT Serif', sans-serif;
+}
+
+.menu-blog-nav-container ul li:hover > ul,
+.menu-blog-nav-container ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+
+#menu-blog-nav {
+    list-style-type: none;
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #192a56;
+    text-decoration: none;
+}
+
+
+
 .blogPageWrapper {
-    margin-top: 4rem;
+    margin-top: 8rem;
     min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(300px, 100%);
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -462,6 +537,7 @@ body {
     text-align: center;
     color: #192a56;
     font-size: 2rem;
+    align-items: center;
 }
 
 .blogThumbnail {
@@ -484,4 +560,248 @@ body {
     color: #7f8fa6;
     font-size: 1rem;
 }
+
+/* 
+    style for single page
+ */
+
+.singleContainer {
+    display: grid;
+    width: 60%;
+    grid-template-columns: 1fr;
+    position: relative;
+    min-height: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px;
+    top: 4rem;
+    margin-bottom: 5rem;
+    justify-items: center;
+}
+
+.singleTitle {
+    font-family: 'PT Serif', sans-serif;
+    color: #192a56;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.singleContainer figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.singleContainer h2 {
+    font-family: 'PT Serif', sans-serif;
+    color: #192a56;
+}
+
+.singleContainer p {
+    max-width: 90%;
+    min-width: 200px;
+    justify-items: center;
+    font-size: 1.4rem;
+    color: rgb(53, 59, 72);
+}
+
+.singleContainer #text {
+    justify-self: end;
+}
+
+/* styles for store */
+
+.storeContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    min-width: 500px;
+}
+
+.heroContainer {
+    width: 100%;
+    height: 40rem;
+    min-width: 20rem;
+    width: 100%; 
+}
+
+.heroContainer::before {
+    content: '';
+    width: 100%;
+    height: 40rem;
+    position: absolute;
+    background-image: linear-gradient(rgb(225, 177, 44, 0.5),rgb(76, 209, 55, 0.5));
+}
+
+
+.heroContainer img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    object-position: 0% 70%;
+}
+
+
+.elephantContainer {
+    position: absolute;
+    top: 17%;
+    left: 11.5%;
+    opacity: 0.2;
+    height: 50%;
+    width: 30%;
+    min-width: 10rem;
+} 
+
+.elephantContainer img {
+    object-fit: contain;
+    height: 22rem;
+    width: 100%;
+    filter: blur(1px);
+}
+
+
+.storeBannerText {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 4rem;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    color: #fff;
+    text-align: end;
+}
+
+.storeHeaderContainer {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    right: 2rem;
+}
+
+.storeMenu {
+    margin-left: 2%;
+    width: 25%;
+    min-width: 10rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: flex-start;
+    position: absolute;
+    top: 40rem;
+}
+
+.storeMenu div ul {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.storeMenu div ul li a {
+    text-decoration: none;
+    color: rgba(39, 60, 117,1.0);
+    font-family: 'PT Serif', serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: none;
+}
+
+.storeMenu div ul li {
+    transition: 0.5s;
+    background-color: none;
+}
+
+.storeMenu div ul li:hover {
+    background-color: rgb(251, 197, 49, 0.7);
+}
+
+.shirtContainer {
+    display: grid;
+    min-width: 60%;
+    min-width: 40rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.shirtText {
+    max-width: 80%;
+    margin-top: 5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shirtText p:nth-child(1), p:nth-child(4) {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(53, 59, 72,1.0);
+}
+
+.shirtText div {
+    height: 2px;
+    width: 10%;
+    background-color: rgba(225, 177, 44,1.0);
+}
+.shirtText p:nth-child(3) {
+    font-size: 1rem;
+    color: rgba(113, 128, 147, 1.0);
+}
+
+.shirtListing {
+    height: 25rem;
+    max-width: 50%;
+    width: 20rem;
+    display: flex;
+    grid-template-areas: repeat(1, 1fr);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shirtListing img {
+    height: 16rem;
+    width: 16rem;
+    object-fit: contain;
+}
+
+.shirtListing h2 {
+    font-size: 1.4rem;
+    font-family: 'Bitter', sans-serif;
+}
+
+.shirtListing h2 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(39, 60, 117,1.0);
+}
+
+.shirtPrice {
+    background-color: rgba(39, 60, 117,1.0);
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 2rem;
+    left: 6rem;
+    color: #fff;
+}
+
 
