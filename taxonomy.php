@@ -5,6 +5,8 @@
 get_header('new');
 ?>
 
+taxonomy page
+
 <div class='storeContainer'>
     <div class='heroContainer'>
         <?php echo wp_get_attachment_image(110, 'full') ?>
@@ -16,7 +18,7 @@ get_header('new');
         </div>
     </div>
     <aside class='storeMenu' > 
-        <?php wp_nav_menu(array('theme_location' => 'store-nav')) ?>
+        <?php wp_nav_menu(array('theme_location' => 'shirts-nav')) ?>
     </aside>
     <div class='shirtText'>
              <p>
@@ -26,7 +28,7 @@ get_header('new');
         <p>
         Funny and cool animal themed tees.<br>
         Straight from our content creators, you won't find these designs anywhere else.<br> 
-        And the best news? 10% of profits goes to support the environment.<br>
+        And the best news? 20% of profits goes to support the environment.<br>
         Mens, womens, childrens. Check out our collection today.
         </p>
         <p>New Shirts</p>
@@ -42,30 +44,17 @@ get_header('new');
               if ($myposts) :
                   foreach($myposts as $post):
                         setup_postdata($post); ?>
-                    <div class='shirtListing'> 
-                        <div class="title">
-                              <?php the_title(); ?>
-                  </div>
+                    <div class='shirtListing'>
+                        <h2>
+                            <a href='<?php the_permalink();?>' >
+                                <?php the_title(); ?>
+                            </a>
+                        </h2>
                         <?php the_post_thumbnail(); ?>
                         <div class='shirtPrice'>
                             <?php echo get_post_meta($post->ID, 'Price', true); ?>
                         </div>
                   </div>  
-                  
-                  <div class='modal'> 
-                    <div class='modal-content'>
-                     <span class='close'>x</span>
-                     <?php the_post_thumbnail(); ?>
-                     <div class='modal-shirt-price'>
-                            <?php echo get_post_meta($post->ID, 'Price', true); ?>
-                    </div>
-                    <h2><?php the_title(); ?></h2>
-                    <div class='shirtDesc'>
-                            <?php echo get_post_meta($post->ID, 'Description', true); ?>
-                    </div>
-                        <a class='amzBtn' href='<?php echo get_post_meta($post->ID, 'Amazon Link', true); ?>'>See on Amazon</a>
-                     </div>
-                  </div>
          <?php
               endforeach; 
                 wp_reset_postdata();
@@ -75,4 +64,5 @@ get_header('new');
         ?>
     </div>
 </div>
+
 <?php get_footer();?>

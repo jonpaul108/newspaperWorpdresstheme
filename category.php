@@ -16,7 +16,6 @@ get_header();
     </nav>
 </div>
 
-
 <div class='blogPageWrapper'>
             <?php 
                     if (have_posts()) :
@@ -36,7 +35,7 @@ get_header();
             <?php 
                 endwhile;
                 else :
-                    echo '<p>NoContent found</p>';
+                    echo '<p>No Content Found</p>';
                 endif;
             ?>  
             </div>    
